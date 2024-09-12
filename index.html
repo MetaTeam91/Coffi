@@ -2,98 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Welcome</title>
-    <style>
-        body {
-            background-color: #f2f2f2;
-            color: #333333;
-            font-family: system-ui;
-            margin: 0 auto;
-            padding: 5%;
-            max-width: 650px;
-        }
-        p {
-            font-size: 18px;
-            color: black;
-            font-weight: 400;
-        }
-        h1 {
-            font-size: 45px;
-            font-weight: 600;
-            background: -webkit-linear-gradient(0deg, #EB873D, #EB4DFF);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        h2 {
-            font-weight: 600;
-            font-size: 25px;
-            color: black;
-        }
-        b {
-            color: #007AFF;
-        }
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #1C1C1E;
-                color: #AAAAAA;
-            }
-            #transaction {
-                background-color: #191919;
-                box-shadow: none;
-            }
-            p {
-                color: #AAAAAA;
-            }
-            h2 {
-                color: white;
-            }
-            .sub, .sub2 {
-                color: white;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffi Mod Menu Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffi</h1>
-    <h2>New GD Menu For iOS (In Development)</h2>
-    <p>
-        Coffi is in development. Meanwhile, you can join the discord server! 
-        <a href="https://discord.gg/uBfdarmkQf">Discord Server</a>
-    </p>
-    <h2>Features (NOTE THESE FEATURES MIGHT NOT BE IN THE MOD, JUST FEATURES I THINK ABOUT MAKING)</h2>
-    <p>
-        Noclip,<br>
-        Speedhack,<br>
-        Replay Bot,<br>
-        Clickbot,<br>
-        Verify Hack,<br>
-        CBF,<br>
-        Script Creator (C++),<br>
-        Unlock All Icons,<br>
-        Show Hitboxes,<br>
-        Show Hitboxes On Death,<br>
-        Macro Creator,<br>
-        Show Trajectory,<br>
-        NONGS Loader,<br>
-        Texture Pack Switcher,<br>
-        GDShare,<br>
-        Macro Sharing,<br>
-        StartPosition Switcher,<br>
-        Smart StartPos,<br>
-        Noclip Accuracy,<br>
-        Noclip Tint,<br>
-        Rainbow Icons,<br>
-        Framestepper,<br>
-        Solid Wave Trail,<br>
-        Wave Trail Color,<br>
-        Layout Mode,<br>
-        Auto Clicker,<br>
-        Copy Hack,<br>
-        Safe Mode,<br>
-        Auto Safe Mode,<br>
-        Macro Exporter,<br>
-        Show Taps,
-    </p>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <h2>Coffi Mod Menu</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Show Hitboxes</a></li>
+                <li><a href="#">Speedhack</a></li>
+                <li><a href="#">Noclip</a></li>
+                <li><a href="#">Macro Bot</a></li>
+                <li><a href="#">CBF</a></li>
+                <li><a href="#">Discord</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <header class="topbar">
+                <h2>Dashboard</h2>
+                <button id="discordBtn">Join Discord</button>
+            </header>
+
+            <section class="dashboard">
+                <div class="card">
+                    <h3>Show Hitboxes</h3>
+                    <p>Enable or disable hitboxes during gameplay.</p>
+                </div>
+                <div class="card">
+                    <h3>Speedhack</h3>
+                    <p>Control the speed of the game to practice levels easier.</p>
+                </div>
+                <div class="card">
+                    <h3>Noclip</h3>
+                    <p>Play levels without dying by passing through obstacles.</p>
+                </div>
+                <div class="card">
+                    <h3>Macro Bot</h3>
+                    <p>Automate clicks for repetitive tasks or challenges.</p>
+                </div>
+                <div class="card">
+                    <h3>CBF (Click Between Frames)</h3>
+                    <p>Advanced tool for fine-tuning jumps between frames.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
