@@ -3,57 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffi Mod Menu Dashboard</title>
+    <title>Coffi Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <nav class="sidebar">
             <div class="logo">
-                <h2>Coffi Mod Menu</h2>
+                <h2>Coffi</h2>
             </div>
             <ul class="nav-links">
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Show Hitboxes</a></li>
-                <li><a href="#">Speedhack</a></li>
-                <li><a href="#">Noclip</a></li>
-                <li><a href="#">Macro Bot</a></li>
-                <li><a href="#">CBF</a></li>
-                <li><a href="#">Discord</a></li>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="features.html">Features</a></li>
             </ul>
         </nav>
 
         <main class="content">
             <header class="topbar">
                 <h2>Dashboard</h2>
-                <button id="discordBtn">Join Discord</button>
             </header>
 
             <section class="dashboard">
                 <div class="card">
-                    <h3>Show Hitboxes</h3>
-                    <p>Enable or disable hitboxes during gameplay.</p>
+                    <h3>Download Coffi</h3>
+                    <p>Get the latest version of Coffi for iOS.</p>
+                    <button onclick="location.href='download.html'">Go to Download</button>
                 </div>
                 <div class="card">
-                    <h3>Speedhack</h3>
-                    <p>Control the speed of the game to practice levels easier.</p>
-                </div>
-                <div class="card">
-                    <h3>Noclip</h3>
-                    <p>Play levels without dying by passing through obstacles.</p>
-                </div>
-                <div class="card">
-                    <h3>Macro Bot</h3>
-                    <p>Automate clicks for repetitive tasks or challenges.</p>
-                </div>
-                <div class="card">
-                    <h3>CBF (Click Between Frames)</h3>
-                    <p>Advanced tool for fine-tuning jumps between frames.</p>
+                    <h3>Features</h3>
+                    <p>Check out the full list of Coffi features.</p>
+                    <button onclick="location.href='features.html'">Go to Features</button>
                 </div>
             </section>
         </main>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
