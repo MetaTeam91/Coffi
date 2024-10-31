@@ -7,15 +7,25 @@
 
 /* General Styling */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #000;
-    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    overflow-x: hidden;
 }
 
+/* Neon Gradient Effect */
+.neon-gradient {
+    background: linear-gradient(45deg, #00f260, #0575e6);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Heading Animations */
 h1, h2, h3 {
     text-align: center;
-    color: #0f0;
+    font-weight: 700;
     animation: glow 1.5s ease-in-out infinite alternate;
+    color: #ffffff;
 }
 
 /* Sidebar styling */
@@ -25,18 +35,20 @@ h1, h2, h3 {
 }
 
 .sidebar {
-    width: 250px;
-    background-color: #111;
+    width: 280px;
+    background-color: #1f1f1f;
     padding: 20px;
-    color: #0f0;
-    animation: slideInLeft 1s ease-out forwards;
+    color: #00d1ff;
+    animation: slideInLeft 0.6s ease-out forwards;
+    transform: translateX(-100%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .logo h2 {
     text-align: center;
     margin-bottom: 30px;
-    font-size: 28px;
-    color: #0f0;
+    font-size: 30px;
+    color: #00d1ff;
 }
 
 .nav-links {
@@ -45,80 +57,118 @@ h1, h2, h3 {
 
 .nav-links li {
     margin: 15px 0;
+    position: relative;
 }
 
 .nav-links a {
-    color: #0f0;
+    color: #e0e0e0;
     text-decoration: none;
-    font-size: 18px;
-    display: block;
-    transition: all 0.3s;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s;
 }
 
 .nav-links a:hover {
-    color: #fff;
-    text-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
+    background-color: #00d1ff;
+    color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 209, 255, 0.4);
 }
 
 /* Content styling */
 .content {
     flex: 1;
-    padding: 40px;
+    padding: 50px;
+    animation: fadeIn 1s ease;
 }
 
-.card {
-    background-color: rgba(15, 15, 15, 0.9);
+.features-section ul {
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 20px rgba(0, 255, 0, 0.6);
-    margin: 20px 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    columns: 2;
+    gap: 20px;
+}
+
+.features-section li {
+    font-size: 18px;
+    padding: 5px 0;
+    color: #8ab4f8;
+    transition: color 0.3s ease;
+}
+
+.features-section li:hover {
+    color: #ff9800;
+}
+
+/* Card Styling */
+.card {
+    background-color: rgba(30, 30, 30, 0.95);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 209, 255, 0.7);
+    margin: 25px 0;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 30px rgba(0, 255, 0, 1);
+    transform: scale(1.08);
+    box-shadow: 0 6px 40px rgba(0, 209, 255, 0.9);
 }
 
 button {
-    background-color: #0f0;
-    color: #000;
+    background-color: #00d1ff;
+    color: #1f1f1f;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: #ff9800;
+    color: #ffffff;
 }
 
 /* Footer styling */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #111;
-    color: #0f0;
+    background-color: #1f1f1f;
+    color: #8ab4f8;
+    font-size: 14px;
+    border-top: 1px solid #333;
 }
 
-/* Neon glow animation */
+/* Keyframe Animations */
 @keyframes glow {
     from {
-        text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
+        text-shadow: 0 0 10px #00d1ff, 0 0 20px #00d1ff, 0 0 30px #00d1ff;
     }
     to {
-        text-shadow: 0 0 20px #0f0, 0 0 30px #0f0, 0 0 40px #0f0;
+        text-shadow: 0 0 20px #00d1ff, 0 0 30px #00d1ff, 0 0 40px #00d1ff;
     }
 }
 
-/* Slide in animation */
 @keyframes slideInLeft {
     0% {
         transform: translateX(-100%);
     }
     100% {
         transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
